@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Education & Learning",
+            "alias": "education-learning",
+            "description": "This section provides extensive information on education and learning, including apprenticeships, training, and resources for school and higher education.",
+            "tags": "Elementary Education, Higher Education, Adult Education",
+            "parent_cat_id": 0,
+            "colors": {
+                "bg_color_1": "#3F51B5",
+                "bg_color_2": "#757DE8",
+                "bg_color_3": "#E9EAFF",
+                "color_grad_1": "#3F51B5",
+                "color_grad_2": "#1B3283"
+            },
+            "icon": {
+                "icon_id": 1591,
+                "icon_url": "https://image.npinew.keenable.in/images/uploads/edu_7edee31842.svg"
+            },
+            "bg1": {
+                "bg1_id": 497,
+                "bg1_url": "https://image.npinew.keenable.in/images/uploads/edu1_c513bc8b47.svg"
+            },
+            "bg2": {
+                "bg2_id": 498,
+                "bg2_url": "https://image.npinew.keenable.in/images/uploads/edu2_71a8fce9b6.svg"
+            },
+            "bg3": {
+                "bg3_id": 499,
+                "bg3_url": "https://image.npinew.keenable.in/images/uploads/edu3_a008eb5a21.svg"
+            },
+            "bg4": {
+                "bg4_id": 500,
+                "bg4_url": "https://image.npinew.keenable.in/images/uploads/edu4_b41f722866.svg"
+            },
+            "is_show_homepage": true,
+            "workflow_status": "published",
+            "created_at": "2024-11-29 17:33:43",
+            "updated_at": "2024-12-02 16:08:40"
+        },
+        {
+            "id": 2,
+            "title": "Jobs",
+            "alias": "jobs",
+            "description": "This section explores job opportunities across various sectors, including IT, manufacturing, and healthcare, with a focus on skill enhancement.",
+            "tags": "Employment, Job Growth, Skill Enhancement",
+            "parent_cat_id": 0,
+            "colors": {
+                "bg_color_1": "#FF9800",
+                "bg_color_2": "#DC7C00",
+                "bg_color_3": "#FFE7C5",
+                "color_grad_1": "#FF9800",
+                "color_grad_2": "#4F3226"
+            },
+            "icon": {
+                "icon_id": 1593,
+                "icon_url": "https://image.npinew.keenable.in/images/uploads/jobs_e93aedf17e.svg"
+            },
+            "bg1": {
+                "bg1_id": 501,
+                "bg1_url": "https://image.npinew.keenable.in/images/uploads/job1_1247d082ed.svg"
+            },
+            "bg2": {
+                "bg2_id": 502,
+                "bg2_url": "https://image.npinew.keenable.in/images/uploads/job2_744eebeab9.svg"
+            },
+            "bg3": {
+                "bg3_id": 503,
+                "bg3_url": "https://image.npinew.keenable.in/images/uploads/job3_bad6ba1267.svg"
+            },
+            "bg4": {
+                "bg4_id": 504,
+                "bg4_url": "https://image.npinew.keenable.in/images/uploads/job4_7120e86059.svg"
+            },
+            "is_show_homepage": true,
+            "workflow_status": "published",
+            "created_at": "2024-11-29 17:33:43",
+            "updated_at": "2024-12-02 16:08:40"
+        },
+.
+.
+.
+.
+.
+.
+    ]
+}
