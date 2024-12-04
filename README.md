@@ -9,93 +9,125 @@
 
 # Laravel CMS Application
 
+## About Laravel
+
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
 ## Key Files and Their Purpose
 
 ### 1. **Models**
-   - **Location:** `app/Models/<model_name>.php`
-   - **Command to Create:**
-     ```bash
-     php artisan make:model <model_name>
-     ```
-   - **Functionality:**  
-     Models define the data structure and relationships for the application, acting as the central point of interaction with the database.  
-     Example:
-     ```php
-     class ExampleModel extends Model {
-         // Define fillable attributes, relationships, and casting.
-     }
-     ```
+
+-   **Location:** `app/Models/<model_name>.php`
+-   **Command to Create:**
+    ```bash
+    php artisan make:model <model_name>
+    ```
+-   **Functionality:**  
+    Models define the data structure and relationships for the application, acting as the central point of interaction with the database.  
+    Example:
+    ```php
+    class ExampleModel extends Model {
+        // Define fillable attributes, relationships, and casting.
+    }
+    ```
 
 ### 2. **Controllers**
-   - **Location:** `app/Http/Controllers/<controller_name>.php`
-   - **Command to Create:**
-     ```bash
-     php artisan make:controller <controller_name>
-     ```
-   - **Functionality:**  
-     Controllers handle incoming requests, interact with models, and return responses to the client.  
-     Example:
-     ```php
-     class ExampleController extends Controller {
-         // Functions to fetch, store, update, or delete data.
-     }
-     ```
+
+-   **Location:** `app/Http/Controllers/<controller_name>.php`
+-   **Command to Create:**
+    ```bash
+    php artisan make:controller <controller_name>
+    ```
+-   **Functionality:**  
+    Controllers handle incoming requests, interact with models, and return responses to the client.  
+    Example:
+    ```php
+    class ExampleController extends Controller {
+        // Functions to fetch, store, update, or delete data.
+    }
+    ```
 
 ### 3. **API Resources**
-   - **Location:** `app/Http/Resources/<resource_name>.php`
-   - **Command to Create:**
-     ```bash
-     php artisan make:resource <resource_name>
-     ```
-   - **Functionality:**  
-     API Resources define how data will be transformed and structured when sent as a response.  
-     Example:
-     ```php
-     class ExampleResource extends JsonResource {
-         public function toArray($request) {
-             return [
-                 'id' => $this->id,
-                 'title' => $this->title,
-             ];
-         }
-     }
-     ```
+
+-   **Location:** `app/Http/Resources/<resource_name>.php`
+-   **Command to Create:**
+    ```bash
+    php artisan make:resource <resource_name>
+    ```
+-   **Functionality:**  
+    API Resources define how data will be transformed and structured when sent as a response.  
+    Example:
+    ```php
+    class ExampleResource extends JsonResource {
+        public function toArray($request) {
+            return [
+                'id' => $this->id,
+                'title' => $this->title,
+            ];
+        }
+    }
+    ```
 
 ### 4. **API Routes**
-   - **Location:** `routes/api.php`
-   - **How to Define Routes:**
-     ```php
-     Route::apiResource('<route_name>', <Controller_classname>::class);
-     ```
-   - **Functionality:**  
-     Defines API endpoints for interacting with the application. These routes map HTTP verbs to specific controller actions.  
-     Example:
-     ```php
-     Route::apiResource('examples', ExampleController::class);
-     ```
+
+-   **Location:** `routes/api.php`
+-   **How to Define Routes:**
+    ```php
+    Route::apiResource('<route_name>', <Controller_classname>::class);
+    ```
+-   **Functionality:**  
+    Defines API endpoints for interacting with the application. These routes map HTTP verbs to specific controller actions.  
+    Example:
+    ```php
+    Route::apiResource('examples', ExampleController::class);
+    ```
 
 ---
 
 ## Workflow Example
 
 ### 1. Create a Model
-```bash
+
+```php
 php artisan make:model ExampleModel
+```
 
+-   File created at: `app/Models/ExampleModel.php`
+-   Function: Represents the examples table.
 
-## About Laravel
+### 2. Create a Controller
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```php
+php artisan make:controller ExampleController
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   File created at: `app/Http/Controllers/ExampleController.php`
+-   Function: Handles requests and responses for Example data.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 3. Define Routes in api.php:
+
+```php
+Route::apiResource('examples', ExampleController::class);
+```
+
+### 4. Create a Resource
+
+```php
+php artisan make:resource ExampleResource
+```
+
+-   File created at: `app/Http/Resources/ExampleResource.php`
+-   Function: Defines the response structure for Example API data.
 
 ## Learning Laravel
 
@@ -111,19 +143,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[WebReinvent](https://webreinvent.com/)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Jump24](https://jump24.co.uk)**
+-   **[Redberry](https://redberry.international/laravel/)**
+-   **[Active Logic](https://activelogic.com)**
+-   **[byte5](https://byte5.de)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
