@@ -9,20 +9,6 @@
 
 # Laravel CMS Application
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
 ## Key Files and Their Purpose
 
 ### 1. **Models**
@@ -94,40 +80,19 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ---
 
-## Workflow Example
+## About Laravel
 
-### 1. Create a Model
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-```php
-php artisan make:model ExampleModel
-```
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
--   File created at: `app/Models/ExampleModel.php`
--   Function: Represents the examples table.
-
-### 2. Create a Controller
-
-```php
-php artisan make:controller ExampleController
-```
-
--   File created at: `app/Http/Controllers/ExampleController.php`
--   Function: Handles requests and responses for Example data.
-
-### 3. Define Routes in api.php:
-
-```php
-Route::apiResource('examples', ExampleController::class);
-```
-
-### 4. Create a Resource
-
-```php
-php artisan make:resource ExampleResource
-```
-
--   File created at: `app/Http/Resources/ExampleResource.php`
--   Function: Defines the response structure for Example API data.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Learning Laravel
 
