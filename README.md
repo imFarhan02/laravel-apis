@@ -7,6 +7,82 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Laravel CMS Application
+
+## Key Files and Their Purpose
+
+### 1. **Models**
+   - **Location:** `app/Models/<model_name>.php`
+   - **Command to Create:**
+     ```bash
+     php artisan make:model <model_name>
+     ```
+   - **Functionality:**  
+     Models define the data structure and relationships for the application, acting as the central point of interaction with the database.  
+     Example:
+     ```php
+     class ExampleModel extends Model {
+         // Define fillable attributes, relationships, and casting.
+     }
+     ```
+
+### 2. **Controllers**
+   - **Location:** `app/Http/Controllers/<controller_name>.php`
+   - **Command to Create:**
+     ```bash
+     php artisan make:controller <controller_name>
+     ```
+   - **Functionality:**  
+     Controllers handle incoming requests, interact with models, and return responses to the client.  
+     Example:
+     ```php
+     class ExampleController extends Controller {
+         // Functions to fetch, store, update, or delete data.
+     }
+     ```
+
+### 3. **API Resources**
+   - **Location:** `app/Http/Resources/<resource_name>.php`
+   - **Command to Create:**
+     ```bash
+     php artisan make:resource <resource_name>
+     ```
+   - **Functionality:**  
+     API Resources define how data will be transformed and structured when sent as a response.  
+     Example:
+     ```php
+     class ExampleResource extends JsonResource {
+         public function toArray($request) {
+             return [
+                 'id' => $this->id,
+                 'title' => $this->title,
+             ];
+         }
+     }
+     ```
+
+### 4. **API Routes**
+   - **Location:** `routes/api.php`
+   - **How to Define Routes:**
+     ```php
+     Route::apiResource('<route_name>', <Controller_classname>::class);
+     ```
+   - **Functionality:**  
+     Defines API endpoints for interacting with the application. These routes map HTTP verbs to specific controller actions.  
+     Example:
+     ```php
+     Route::apiResource('examples', ExampleController::class);
+     ```
+
+---
+
+## Workflow Example
+
+### 1. Create a Model
+```bash
+php artisan make:model ExampleModel
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
